@@ -1,0 +1,153 @@
+/* Synapse Content Adaptation Styles */
+
+/* Base adaptive styles */
+.synapse-adapted {
+  transition: all 0.3s ease !important;
+}
+
+/* Focused state adaptations */
+.synapse-focused {
+  line-height: 1.6 !important;
+  font-size: 1.05em !important;
+}
+
+.synapse-focused h1,
+.synapse-focused h2,
+.synapse-focused h3 {
+  color: #2563eb !important;
+  border-left: 3px solid #3b82f6 !important;
+  padding-left: 12px !important;
+}
+
+/* Fatigued state adaptations */
+.synapse-fatigued {
+  line-height: 2.0 !important;
+  font-size: 1.15em !important;
+  letter-spacing: 0.5px !important;
+}
+
+.synapse-fatigued p {
+  margin-bottom: 1.5em !important;
+}
+
+.synapse-fatigued h1,
+.synapse-fatigued h2,
+.synapse-fatigued h3 {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  margin: 1em 0 !important;
+}
+
+/* Distracted state adaptations */
+.synapse-distracted {
+  background: #fef3c7 !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  border: 2px solid #f59e0b !important;
+}
+
+.synapse-distracted p {
+  font-weight: 500 !important;
+  color: #92400e !important;
+}
+
+.synapse-distracted h1,
+.synapse-distracted h2,
+.synapse-distracted h3 {
+  background: #f59e0b !important;
+  color: white !important;
+  padding: 12px !important;
+  text-align: center !important;
+  border-radius: 6px !important;
+}
+
+/* Receptive state adaptations */
+.synapse-receptive {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe) !important;
+  padding: 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid #0ea5e9 !important;
+}
+
+.synapse-receptive h1,
+.synapse-receptive h2,
+.synapse-receptive h3 {
+  color: #0c4a6e !important;
+  border-bottom: 2px solid #0ea5e9 !important;
+  padding-bottom: 8px !important;
+}
+
+.synapse-receptive strong,
+.synapse-receptive b {
+  background: #fbbf24 !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+}
+
+/* Floating indicator styles */
+#synapse-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#synapse-indicator:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.synapse-indicator-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.synapse-logo {
+  font-size: 16px;
+}
+
+.synapse-state {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.synapse-state.focused {
+  color: #059669;
+}
+.synapse-state.fatigued {
+  color: #d97706;
+}
+.synapse-state.distracted {
+  color: #dc2626;
+}
+.synapse-state.receptive {
+  color: #7c3aed;
+}
+
+/* Knowledge highlighting */
+.synapse-concept-highlight {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+  padding: 1px 3px !important;
+  border-radius: 3px !important;
+  font-weight: 500 !important;
+  color: #92400e !important;
+  cursor: help !important;
+}
+
+/* Smooth transitions for all adaptations */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, margin 0.3s ease !important;
+}

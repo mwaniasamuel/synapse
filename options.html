@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="settings-container">
+        <!-- Header -->
+        <header class="settings-header">
+            <div class="logo">
+                <div class="logo-icon">🧠</div>
+                <h1>Synapse Settings</h1>
+            </div>
+            <div class="version">v1.0.0</div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="settings-nav">
+            <button class="nav-btn active" data-section="general">General</button>
+            <button class="nav-btn" data-section="adaptation">Content Adaptation</button>
+            <button class="nav-btn" data-section="knowledge">Knowledge Mapping</button>
+            <button class="nav-btn" data-section="privacy">Privacy & Data</button>
+            <button class="nav-btn" data-section="about">About</button>
+        </nav>
+
+        <!-- Settings Sections -->
+        <main class="settings-content">
+            <!-- General Settings -->
+            <section id="general" class="settings-section active">
+                <h2>General Settings</h2>
+                
+                <div class="setting-group">
+                    <h3>Analysis</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableAnalysis" checked>
+                            <span class="checkmark"></span>
+                            Enable cognitive state analysis
+                        </label>
+                        <p class="setting-description">Allow Synapse to analyze your browsing patterns to detect cognitive states.</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="showIndicator" checked>
+                            <span class="checkmark"></span>
+                            Show floating indicator
+                        </label>
+                        <p class="setting-description">Display a small indicator showing your current cognitive state on web pages.</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Notifications</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableNotifications" checked>
+                            <span class="checkmark"></span>
+                            Enable notifications
+                        </label>
+                        <p class="setting-description">Receive notifications about your learning progress and cognitive state changes.</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Session Management</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            Auto-start learning sessions
+                            <select id="autoStartSessions">
+                                <option value="never">Never</option>
+                                <option value="educational">On educational sites</option>
+                                <option value="always">Always</option>
+                            </select>
+                        </label>
+                        <p class="setting-description">Automatically start tracking learning sessions on specific types of websites.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Adaptation Settings -->
+            <section id="adaptation" class="settings-section">
+                <h2>Content Adaptation</h2>
+                
+                <div class="setting-group">
+                    <h3>Adaptive Features</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableContentAdaptation" checked>
+                            <span class="checkmark"></span>
+                            Enable content adaptation
+                        </label>
+                        <p class="setting-description">Allow Synapse to modify webpage content based on your cognitive state.</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="autoAdaptation" checked>
+                            <span class="checkmark"></span>
+                            Automatic adaptation
+                        </label>
+                        <p class="setting-description">Automatically adapt content when cognitive state changes are detected.</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Adaptation Intensity</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            Adaptation strength
+                            <select id="adaptationIntensity">
+                                <option value="subtle">Subtle</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="strong">Strong</option>
+                            </select>
+                        </label>
+                        <p class="setting-description">Control how dramatically content is modified during adaptation.</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Cognitive State Adaptations</h3>
+                    <div class="adaptation-preview">
+                        <div class="state-preview" data-state="focused">
+                            <h4>Focused State</h4>
+                            <p>Enhanced readability with subtle highlighting</p>
+                        </div>
+                        <div class="state-preview" data-state="fatigued">
+                            <h4>Fatigued State</h4>
+                            <p>Increased spacing and larger text for easier reading</p>
+                        </div>
+                        <div class="state-preview" data-state="distracted">
+                            <h4>Distracted State</h4>
+                            <p>Highlighted content with attention-grabbing formatting</p>
+                        </div>
+                        <div class="state-preview" data-state="receptive">
+                            <h4>Receptive State</h4>
+                            <p>Enhanced learning environment with concept highlighting</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Knowledge Mapping Settings -->
+            <section id="knowledge" class="settings-section">
+                <h2>Knowledge Mapping</h2>
+                
+                <div class="setting-group">
+                    <h3>Knowledge Extraction</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableKnowledgeExtraction" checked>
+                            <span class="checkmark"></span>
+                            Enable knowledge extraction
+                        </label>
+                        <p class="setting-description">Extract and map concepts from the content you read.</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableConceptHighlighting" checked>
+                            <span class="checkmark"></span>
+                            Highlight recognized concepts
+                        </label>
+                        <p class="setting-description">Visually highlight concepts that are part of your knowledge graph.</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Knowledge Graph</h3>
+                    <div class="knowledge-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" id="totalConcepts">0</span>
+                            <span class="stat-label">Concepts Learned</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="totalConnections">0</span>
+                            <span class="stat-label">Connections Made</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="totalPages">0</span>
+                            <span class="stat-label">Pages Analyzed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-actions">
+                        <button class="btn secondary" id="viewKnowledgeGraph">View Knowledge Graph</button>
+                        <button class="btn secondary" id="exportKnowledge">Export Knowledge Data</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Privacy & Data Settings -->
+            <section id="privacy" class="settings-section">
+                <h2>Privacy & Data</h2>
+                
+                <div class="setting-group">
+                    <h3>Data Storage</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            Data retention period
+                            <select id="dataRetention">
+                                <option value="7">7 days</option>
+                                <option value="30" selected>30 days</option>
+                                <option value="90">90 days</option>
+                                <option value="365">1 year</option>
+                                <option value="0">Never delete</option>
+                            </select>
+                        </label>
+                        <p class="setting-description">How long to keep your learning data and cognitive patterns.</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Privacy Controls</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="localProcessingOnly" checked disabled>
+                            <span class="checkmark"></span>
+                            Local processing only
+                        </label>
+                        <p class="setting-description">All analysis happens locally in your browser. No data is sent to external servers.</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Data Management</h3>
+                    <div class="data-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" id="dataSize">0 KB</span>
+                            <span class="stat-label">Storage Used</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="lastBackup">Never</span>
+                            <span class="stat-label">Last Export</span>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-actions">
+                        <button class="btn secondary" id="exportData">Export All Data</button>
+                        <button class="btn secondary" id="importData">Import Data</button>
+                        <button class="btn danger" id="clearAllData">Clear All Data</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="settings-section">
+                <h2>About Synapse</h2>
+                
+                <div class="about-content">
+                    <div class="about-section">
+                        <h3>Cognitive Learning Acceleration Platform</h3>
+                        <p>Synapse is a Chrome extension that adapts to your cognitive patterns in real-time, optimizing content presentation and building personalized knowledge maps to accelerate your learning journey.</p>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Real-time cognitive state detection</li>
+                            <li>Adaptive content presentation</li>
+                            <li>Personal knowledge mapping</li>
+                            <li>Learning session management</li>
+                            <li>Privacy-first design</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Research Foundation</h3>
+                        <p>Built on cognitive science research addressing the challenges of digital learning in an AI-dominated world. Designed specifically to enhance focus and knowledge retention for African learners and global digital education.</p>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Version Information</h3>
+                        <div class="version-info">
+                            <div class="info-item">
+                                <span class="info-label">Version:</span>
+                                <span class="info-value">1.0.0</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Release Date:</span>
+                                <span class="info-value">January 2024</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Developer:</span>
+                                <span class="info-value">Samuel Mwania</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-actions">
+                        <button class="btn secondary" id="viewChangelog">View Changelog</button>
+                        <button class="btn secondary" id="reportIssue">Report Issue</button>
+                        <button class="btn secondary" id="rateExtension">Rate Extension</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Save Indicator -->
+        <div class="save-indicator" id="saveIndicator">
+            <span class="save-text">Settings saved</span>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

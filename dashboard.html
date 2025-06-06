@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Knowledge Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🧠</div>
+                    <h1>Synapse Knowledge Dashboard</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="btn secondary" id="exportBtn">Export Data</button>
+                    <button class="btn secondary" id="settingsBtn">Settings</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Stats Overview -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="totalConcepts">0</div>
+                            <div class="stat-label">Concepts Learned</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔗</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="totalConnections">0</div>
+                            <div class="stat-label">Knowledge Connections</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📄</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="totalPages">0</div>
+                            <div class="stat-label">Pages Analyzed</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="totalTime">0h</div>
+                            <div class="stat-label">Learning Time</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Knowledge Graph Visualization -->
+            <section class="graph-section">
+                <div class="section-header">
+                    <h2>Knowledge Graph</h2>
+                    <div class="graph-controls">
+                        <button class="btn small" id="resetZoom">Reset View</button>
+                        <button class="btn small" id="centerGraph">Center</button>
+                    </div>
+                </div>
+                <div class="graph-container">
+                    <div id="knowledgeGraph" class="knowledge-graph">
+                        <div class="graph-placeholder">
+                            <div class="placeholder-icon">🗺️</div>
+                            <h3>Your Knowledge Map</h3>
+                            <p>Start browsing educational content to build your personalized knowledge graph</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="activity-section">
+                <div class="section-header">
+                    <h2>Recent Learning Activity</h2>
+                    <button class="btn small" id="clearActivity">Clear History</button>
+                </div>
+                <div class="activity-list" id="activityList">
+                    <div class="activity-placeholder">
+                        <p>No recent activity. Start learning to see your progress here!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Concept Details Panel -->
+            <aside class="details-panel" id="detailsPanel">
+                <div class="panel-header">
+                    <h3 id="conceptTitle">Concept Details</h3>
+                    <button class="close-btn" id="closePanel">×</button>
+                </div>
+                <div class="panel-content" id="panelContent">
+                    <p>Select a concept from the knowledge graph to view details</p>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

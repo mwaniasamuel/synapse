@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">🧠</div>
+                <span class="logo-text">Synapse</span>
+            </div>
+            <div class="status-indicator" id="statusIndicator">
+                <div class="status-dot"></div>
+                <span id="statusText">Analyzing...</span>
+            </div>
+        </div>
+
+        <!-- Cognitive State Display -->
+        <div class="cognitive-state">
+            <h3>Cognitive State</h3>
+            <div class="state-display">
+                <div class="state-badge" id="cognitiveState">
+                    <span id="stateText">Focused</span>
+                    <div class="confidence" id="confidence">85%</div>
+                </div>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <label>Attention Level</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="attentionLevel" style="width: 80%"></div>
+                    </div>
+                    <span class="metric-value" id="attentionValue">80%</span>
+                </div>
+                
+                <div class="metric">
+                    <label>Learning Efficiency</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="learningEfficiency" style="width: 75%"></div>
+                    </div>
+                    <span class="metric-value" id="efficiencyValue">75%</span>
+                </div>
+                
+                <div class="metric">
+                    <label>Focus Duration</label>
+                    <div class="time-display" id="focusDuration">12m 34s</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="action-btn" id="adaptContentBtn">
+                <span class="btn-icon">🎯</span>
+                <span>Adapt Content</span>
+            </button>
+            <button class="action-btn" id="viewKnowledgeBtn">
+                <span class="btn-icon">🗺️</span>
+                <span>Knowledge Map</span>
+            </button>
+        </div>
+
+        <!-- Session Info -->
+        <div class="session-info">
+            <div class="session-stat">
+                <span class="stat-label">Session Time</span>
+                <span class="stat-value" id="sessionTime">25m 12s</span>
+            </div>
+            <div class="session-stat">
+                <span class="stat-label">Concepts Learned</span>
+                <span class="stat-value" id="conceptsLearned">7</span>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="control-btn" id="pauseBtn">
+                <span class="btn-icon">⏸️</span>
+                <span>Pause Analysis</span>
+            </button>
+            <button class="control-btn secondary" id="settingsBtn">
+                <span class="btn-icon">⚙️</span>
+                <span>Settings</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
